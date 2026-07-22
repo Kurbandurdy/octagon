@@ -18,7 +18,20 @@ bot.command('start', (ctx) => {
 });
 
 bot.command('help', (ctx) => {
-  ctx.reply('Доступные команды: /start, /help');
+  const helpText = 'Доступные команды:\n' +
+                   '/start - Приветственное сообщение\n' +
+                   '/help - Список команд\n' +
+                   '/site - Ссылка на сайт Октагона\n' +
+                   '/creator - Информация о создателе';
+  ctx.reply(helpText);
+});
+
+bot.command('site', (ctx) => {
+  ctx.reply('https://octagon-students.ru');
+});
+
+bot.command('creator', (ctx) => {
+  ctx.reply('Kurbandurdy Suleymankulyyev');
 });
 
 console.log('Бот запущен и ожидает сообщений...');
